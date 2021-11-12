@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <div class="user-info">
+        <div class="picture-container">
+          <img src="./assets/images/user.png" alt="david" />
+        </div>
+        <div class="username">
+          <h3 id="sidebarName">David Paul</h3>
+          <p id="sidebarEmail">davidpaul@gmail.com</p>
+        </div>
+      </div>
+      <div href="index.html" class="nav-link">
+        <a class="d-flex nav-icons">
+          <img src="./assets/images/user-prof.png" alt="user" />
+          <span class="nav-item-name">Profile</span>
+        </a>
+        <a href="orderHistory.html" class="d-flex nav-icons">
+          <img src="./assets/images/orders.png" alt="user" />
+          <span class="nav-item-name">Orders</span>
+        </a>
+        <a class="d-flex nav-icons">
+          <img src="./assets/images/settings 1.png" alt="us" />
+          <span class="nav-item-name">Settings</span>
+        </a>
+        <a class="d-flex nav-icons logout">
+          <img src="./assets/images/logout.png" alt="user" />
+          <span class="nav-item-name">Logout</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="header">
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776;
+      </span>  
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropbtn">David Paul 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="page-header">
+          <h1>Your Personal Profile Info</h1>
+        </div>
+
+        <form action="/index.html" onsubmit="saveInformation()">
+          <div class="row user-detail">
+            <div class="col-md-4 profile-detail1">
+              <div class="d-flex initial-step">
+                <div class="first-step">1</div>
+                <h5>PROFILE</h5>
+              </div>
+
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="David"
+                  name="firstName"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Paul"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="davidpaul@gmail.com"
+                />
+              </div>
+            </div>
+            <div class="col-md-4 profile-detail2">
+              <div class="form-group">
+                <label for="personalPhoneNo">Personal phone number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="personalPhoneNo"
+                  placeholder="+34-584294434"
+                />
+              </div>
+              <div class="form-group">
+                <label for="workPhoneNumber">Work phone number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="workPhoneNumber"
+                  placeholder="+34-584294434"
+                />
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control" id="country">
+                  <option>Spain</option>
+                  <option>USA</option>
+                  <option>Canada</option>
+                  <option>Sri Lanka</option>
+                  <option>China</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-4 password-details">
+              <div class="d-flex initial-step">
+                <div class="second-step">2</div>
+                <h5>PASSWORD</h5>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                />
+              </div>
+            </div>
+            <div class="update-options-btn">
+              <button type="submit" class="btn btn-info save-changes-btn">
+                Save Changes
+              </button>
+              <button type="button" class="btn btn-info cancel-btn">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

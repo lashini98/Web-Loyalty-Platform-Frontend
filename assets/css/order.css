@@ -1,0 +1,46 @@
+.order-sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-tabs {
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px 90px;
+  color: #134d62;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.order-sub .summary{
+    padding-left: 20px;
+    color: black;
+    opacity: 34%;
+}
+
+.order-history-records{
+    padding: 40px 86px;
+}
+
+.add-order-btn button{
+    background-color: #134d62;
+    font-size: 15px;
+    font-weight: 520;
+    border-radius: 10px;
+
+}
+.add-order-btn {
+    padding-right: 91px;
+}
+
+th{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+td{
+  font-weight: 300;
+  font-size: 14px;
+
+}
