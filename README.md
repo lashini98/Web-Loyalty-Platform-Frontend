@@ -1,10 +1,10 @@
 # Web Loyalty Platform
 
 
-![Problem](images/readme/OrderHistory.png)
+![Problem](assets/images/readme/OrderHistory.png)
 
-![Problem](images/readme/Profile.png)
+![Problem](assets/images/readme/Profile.png)
 
-![Problem](images/readme/sidebar.png)
+![Problem](assets/images/readme/sidebar.png)
 
 
